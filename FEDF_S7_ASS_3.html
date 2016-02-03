@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Check Numbers</title>
+	</head>
+	<script>
+		function validateNum(e){
+			//var val = document.forms['myForm']['numTextBox'].value;
+			if(isNaN(String.fromCharCode(e.charCode))){
+				document.getElementById('numTextBox').style.background = '#ff0000';
+				return false;
+			}
+			else{
+				document.getElementById('numTextBox').style.background = '#ffffff';
+			}
+		}
+	</script>
+	<body>
+		<form id="myForm">
+			<input id="numTextBox" type="text" onkeypress="return validateNum(event)"/>
+		</form>
+	</body>
+
+</html>
